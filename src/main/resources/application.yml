@@ -1,0 +1,61 @@
+server:
+  port: 8010
+  tomcat:
+    uri-encoding: UTF-8
+    max-connections: 2000
+    max-http-post-size: 0
+spring:
+  profiles:
+    active: dev
+  mvc:
+    #static-path-pattern: classpath:/static/**
+    throw-exception-if-no-handler-found: true
+    async:
+      request-timeout: 60000
+  thymeleaf:
+       prefix: classpath:/templates/
+       suffix: .html
+       cache: false #关闭缓存
+  resources:
+    static-locations: classpath:/static/
+    add-mappings: false
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+  devtools:
+    livereload:
+      enabled: true
+  servlet:
+    multipart:
+      max-file-size: 45Mb
+      max-request-size: 45Mb
+  mail:
+    protocol: smtp
+    host: smtp.163.com
+    username: q308497741@163.com
+    password: pgkptxwqpnyhdihc
+    default-encoding: UTF-8
+    properties:
+      mail:
+        port: 465
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+            port: 465
+            fallback: false
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    com.tys.pyx: debug
+    org.springframework.cache: trace
+    root: INFO
+mapper:
+  safe-delete: true
+  safe-update: true
