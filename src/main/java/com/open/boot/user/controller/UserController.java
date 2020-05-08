@@ -1,4 +1,5 @@
 package com.open.boot.user.controller;
+import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.github.pagehelper.util.StringUtil;
@@ -9,17 +10,16 @@ import com.open.boot.core.redis.RedisUtil;
 import com.open.boot.core.utils.CommonUtil;
 import com.open.boot.user.model.User;
 import com.open.boot.user.service.IUserService;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Condition;
-import com.alibaba.fastjson.JSON;
+
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
-import javax.annotation.Resource;
 /**
 * Created by actor-T on 2018/12/07.
 */
@@ -55,7 +55,7 @@ public class UserController {
         return ResultGenerator.genSuccessResult();
     }
 
-    @RequestMapping("/detail")
+@RequestMapping("/detail")
     public Result detail(@RequestParam Integer id) {
         User user = userService.findById(id);
         return ResultGenerator.genSuccessResult(user);

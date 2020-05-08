@@ -78,7 +78,7 @@ function setUpController() {
         var urlWithVars = $axure.getLinkUrlWithVars(urlToLoad);
         var currentData = $axure.messageCenter.getState('page.data');
         var currentUrl = currentData && currentData.location;
-        if(currentUrl && currentUrl.indexOf('#') != -1) currentUrl = currentUrl.substring(0, currentUrl.indexOf('#'))
+        if(currentUrl && currentUrl.indexOf('#') != -1) currentUrl = currentUrl.substring(0, currentUrl.indexOf('#'));
 
         // this is so we can make sure the current frame reloads if the variables have changed
         // by default, if the location is the same but the hash code is different, the browser will not

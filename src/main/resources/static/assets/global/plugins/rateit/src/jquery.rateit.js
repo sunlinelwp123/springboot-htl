@@ -215,7 +215,9 @@
                 var pageX = (event.changedTouches) ? event.changedTouches[0].pageX : event.pageX;
 
                 var offsetx = pageX - $(element).offset().left;
-                if (!ltr) { offsetx = range.width() - offsetx };
+                if (!ltr) {
+                    offsetx = range.width() - offsetx
+                }
                 if (offsetx > range.width()) { offsetx = range.width(); }
                 if (offsetx < 0) { offsetx = 0; }
 
@@ -328,8 +330,7 @@
 
         first.target.dispatchEvent(simulatedEvent);
         event.preventDefault();
-    };
-
+    }
     //some default values.
     $.fn.rateit.defaults = { min: 0, max: 5, step: 0.5, starwidth: 16, starheight: 16, readonly: false, resetable: true, ispreset: false };
 

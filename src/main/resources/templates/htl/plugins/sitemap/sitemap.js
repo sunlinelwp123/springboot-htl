@@ -541,12 +541,12 @@
         if(qstring.length < 2) return "";
 
         var prms = qstring[1].split("&");
-        var frmelements = new Array();
+        var frmelements = [];
         var currprmeter, querystr = "";
 
         for(var i = 0; i < prms.length; i++) {
             currprmeter = prms[i].split("=");
-            frmelements[i] = new Array();
+            frmelements[i] = [];
             frmelements[i][0] = currprmeter[0];
             frmelements[i][1] = currprmeter[1];
         }

@@ -33,5 +33,4 @@ public enum AliyunDysmsTemplateEnum {
 
 	public void setTemplateConent(String templateConent) {
 		TemplateConent = templateConent;
-	}
-}
+	}}

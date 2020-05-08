@@ -230,7 +230,7 @@ $axure.internal(function($ax) {
             $link.click(function() {
                 _handleEvent(elementId, eventInfo, axEventObject, true, synthetic);
                 $('#' + linksId).remove();
-                return;
+
             });
             $container.append($link);
         }

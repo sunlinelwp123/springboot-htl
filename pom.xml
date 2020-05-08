@@ -182,7 +182,7 @@
 			<version>5.5.13</version>
 		</dependency>
 		<!--PDFxmlworker https://mvnrepository.com/artifact/com.itextpdf.tool/xmlworker -->
-		<!-- <dependency> <groupId>com.itextpdf.tool</groupId> <artifactId>xmlworker</artifactId> 
+		<!-- <dependency> <groupId>com.itextpdf.tool</groupId> <artifactId>xmlworker</artifactId>
 			<version>5.5.13</version> </dependency> -->
 		<!--输出中文 https://mvnrepository.com/artifact/com.itextpdf/itext-asian -->
 		<dependency>
@@ -208,6 +208,33 @@
 			<version>1.59</version>
 		</dependency>
 		<!-- end -->
+		<!-- 供批处理块包 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-batch</artifactId>
+		</dependency>
+		<!-- end -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.23.1-GA</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>persistence-api</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>

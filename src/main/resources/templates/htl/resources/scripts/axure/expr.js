@@ -390,14 +390,14 @@ $axure.internal(function($ax) {
     };
 
     _exprFunctions.GetCursorRectangles = function() {
-        var rects = new Object();
+        var rects = {};
         rects.lastRect = new $ax.drag.Rectangle($ax.lastMouseLocation.x, $ax.lastMouseLocation.y, 1, 1);
         rects.currentRect = new $ax.drag.Rectangle($ax.mouseLocation.x, $ax.mouseLocation.y, 1, 1);
         return rects;
     };
 
     _exprFunctions.GetWidgetRectangles = function(elementId, eventInfo) {
-        var rects = new Object();
+        var rects = {};
         var jObj = $jobj(elementId);
         if(jObj.length == 0) {
             rects.lastRect = rects.currentRect = new $ax.drag.Rectangle(-1, -1, -1, -1);

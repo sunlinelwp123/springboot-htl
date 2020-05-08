@@ -1,15 +1,7 @@
 package com.open.boot.core.configurer;
 
-import static com.open.boot.core.CoreConstant.BASE_PACKAGE;
-import static com.open.boot.core.CoreConstant.MAPPER_INTERFACE_REFERENCE;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Properties;
-
-import javax.sql.DataSource;
-
+import com.github.pagehelper.PageHelper;
+import com.open.boot.core.interceptor.CameHumpInterceptor;
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -20,11 +12,16 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.util.ObjectUtils;
-
-import com.github.pagehelper.PageHelper;
-import com.open.boot.core.interceptor.CameHumpInterceptor;
-
 import tk.mybatis.spring.mapper.MapperScannerConfigurer;
+
+import javax.sql.DataSource;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Properties;
+
+import static com.open.boot.core.CoreConstant.BASE_PACKAGE;
+import static com.open.boot.core.CoreConstant.MAPPER_INTERFACE_REFERENCE;
 
 /**
  * Mybatis,Mapper,PageHelper 配置
@@ -92,11 +89,10 @@ public class MybatisConfig {
 					org.springframework.core.io.Resource[] mappers = resourceResolver.getResources(mapperLocation);
 					resources.addAll(Arrays.asList(mappers));
 				} catch (IOException ex) {
-					;
-				}
+                }
 			}
 		}
-		return (org.springframework.core.io.Resource[]) resources
+		return resources
 				.toArray(new org.springframework.core.io.Resource[resources.size()]);
 	}
 }

@@ -25,14 +25,14 @@ var ReCheck=function(){
 					 _checkData=data;
 					 $(_eventObj).trigger(_event);//触发原事件--重新提交
 				 }else{
-					 _checkData=null
+					 _checkData=null;
 					 $('.msg', $("#index_checkModal")).text(ret.retMsg);
 					 $('.alert-success',$("#index_checkModal")).hide();
 					 $('.alert-danger',$("#index_checkModal")).show();	
 				 }
 			}, 
 			function(ret){
-				_checkData=null
+				_checkData=null;
 				$('.msg', $("#index_checkModal")).text("复核验证请求异常");
 				$('.alert-success',$("#index_checkModal")).hide();
 				$('.alert-danger',$("#index_checkModal")).show();			
@@ -52,7 +52,7 @@ var ReCheck=function(){
 		}
 		_eventObj=obj;
 		_event=event;
-	}
+	};
 	
 	var _clearModal = function(){
 		$('.alert-success',$("#index_checkModal")).hide();
@@ -60,19 +60,19 @@ var ReCheck=function(){
 		$('.msg', $("#index_checkModal")).text("");
 		$('input[name="authus"]', $("#index_checkModal")).val("");
 		$('input[name="authpw"]', $("#index_checkModal")).val("");
-	}
+	};
 	
 	var _hideModal = function(){
 		$("#index_checkModal").modal("hide");
-	}
+	};
 	
 	//F8键盘事件
 	$(document).keydown(function (event) {
 		$('button[data-bb-handler="ok"]',$(".modal-dialog")).trigger("click");//隐藏原弹出窗。
 	    if (event.keyCode === 119) {//F8  键盘码 119 
 	    	$("#index_recheck").trigger("click");
-	    };
-	});
+        }
+    });
 	
 	var _getCheckData = function(input){
 		if(!Sunline.isNull(_checkData)){
@@ -82,14 +82,14 @@ var ReCheck=function(){
 		}
 		_checkData = null;
 		_clearModal();
-	}
+	};
 	
 	var  _getClickEvent = function(func){
 		$("#index_recheck").unbind("click");//解绑原事件
 		$("#index_recheck").bind('click',function(){//绑定新事件
 			      func();
 		});
-	}
+	};
 	
 	
 	return {

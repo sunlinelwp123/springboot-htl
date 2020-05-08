@@ -53,7 +53,7 @@
             });
         }
 
-        var moveInfo = new Object();
+        var moveInfo = {};
         moveInfo.x = horzX;
         moveInfo.y = vertY;
         moveInfo.options = {};
@@ -65,7 +65,7 @@
     };
 
     _move.nopMove = function(id) {
-        var moveInfo = new Object();
+        var moveInfo = {};
         moveInfo.x = 0;
         moveInfo.y = 0;
         moveInfo.options = {};

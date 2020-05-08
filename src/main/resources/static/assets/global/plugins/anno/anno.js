@@ -91,7 +91,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if ((others != null ? others.length : void 0) > 0) {
 	      this.chainTo(new Anno(others));
 	    }
-	    return;
+
 	  }
 
 	  Anno.setDefaults = function(options) {

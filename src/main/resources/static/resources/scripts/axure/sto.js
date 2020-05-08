@@ -99,7 +99,7 @@ $axure.internal(function($ax) {
         var retVal = scope.hasOwnProperty(sto.name) ? scope[sto.name]  : $ax.globalVariableProvider.getVariableValue(sto.name, eventInfo);
         // Handle desired type here?
         if((sto.desiredType == 'int' || sto.desiredType == 'float')) {
-            var num = new Number(retVal);
+            var num = Number(retVal);
             retVal = isNaN(num.valueOf()) ? retVal : num;
         }
         return retVal;

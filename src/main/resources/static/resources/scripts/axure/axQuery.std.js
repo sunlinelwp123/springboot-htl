@@ -435,7 +435,7 @@ $axure.internal(function($ax) {
 
                 var widgetType = $ax.getTypeFromElementId(currentItem);
                 if(widgetType == TEXT_BOX_TYPE || widgetType == TEXT_AREA_TYPE) { //Do nothing for non rtf
-                    continue;
+
                 } else {
                     //TODO -- [mas] fix this!
                     var idRtf = '#' + currentItem;

@@ -1,5 +1,11 @@
 package com.open.boot.pdf;
 
+import com.itextpdf.text.*;
+import com.itextpdf.text.pdf.*;
+import com.open.boot.common.enumset.Constant;
+import com.open.boot.pdf.model.Rock;
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -7,28 +13,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-import org.apache.commons.lang3.StringUtils;
-
-import com.itextpdf.text.Chunk;
-import com.itextpdf.text.Document;
-import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.Element;
-import com.itextpdf.text.Font;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.Phrase;
-import com.itextpdf.text.Rectangle;
-import com.itextpdf.text.pdf.AcroFields;
-import com.itextpdf.text.pdf.BaseFont;
-import com.itextpdf.text.pdf.PdfContentByte;
-import com.itextpdf.text.pdf.PdfImportedPage;
-import com.itextpdf.text.pdf.PdfPCell;
-import com.itextpdf.text.pdf.PdfPTable;
-import com.itextpdf.text.pdf.PdfReader;
-import com.itextpdf.text.pdf.PdfStamper;
-import com.itextpdf.text.pdf.PdfWriter;
-import com.open.boot.common.enumset.Constant;
-import com.open.boot.pdf.model.Rock;
 
 //利用itextpdf+adobe acrobat+pdf模板生成pdf文件
 public class PdfTEmplate {
@@ -142,7 +126,7 @@ public class PdfTEmplate {
 		reader.close();
 	}
 
-	private static Phrase getPhrase(Map<String, String> pageEndMap) throws Exception, IOException {
+	private static Phrase getPhrase(Map<String, String> pageEndMap) throws Exception {
 		if (StringUtils.isEmpty(pageEndMap.get("captainName"))) {
 			pageEndMap.put("captainName", "无");
 		}

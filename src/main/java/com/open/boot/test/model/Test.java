@@ -7,8 +7,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 public class Test {
 	public void test(HttpServletRequest request, HttpServletResponse response) {
-		
-		
 		 new ModelAndView();
 	}
 }

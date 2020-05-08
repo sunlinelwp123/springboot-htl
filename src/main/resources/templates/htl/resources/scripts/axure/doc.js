@@ -204,7 +204,7 @@
             var currentQuery = $(event.srcElement || event.target);
             while(currentQuery && currentQuery.length && (!$obj(currentQuery.attr('id')) || $jobj(currentQuery.attr('id')).hasClass('text'))) {
                 currentQuery = currentQuery.parent();
-            };
+            }
             return currentQuery.attr('id');
         };
         $ax.getSrcElementIdFromEvent = _getSrcElementIdFromEvent;

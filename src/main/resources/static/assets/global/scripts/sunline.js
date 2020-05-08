@@ -224,7 +224,7 @@ var Sunline = function() {
 			max : jQuery.validator.format("请输入一个最大为{0} 的值"),
 			min : jQuery.validator.format("请输入一个最小为{0} 的值")
 		});
-	}
+	};
 	/***************************************************************************
 	 * 给出两个date 算出俩个间隔时间 返回值为一个数组 第一个值为天数，第二个值为小时数，第三个值为分钟数第四个值为秒数 [12,15,23,34]
 	 * date1，date2都为毫秒数
@@ -239,10 +239,10 @@ var Sunline = function() {
 		var seconds = Math.floor((interval - days * 3600 * 24 * 1000 - hours
 				* 3600 * 1000 - minuts * 60 * 1000) / 1000);
 		return [ days, hours, minuts, seconds ];
-	}
+	};
 	var _localPath =function(url){
 		return  window.location.href = _basePath + "/path/" + url;	
-	}
+	};
 	return {
 		/**
 		 * 设置基准路径

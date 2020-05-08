@@ -24,7 +24,7 @@ public class ExportTextUtil {
 		// 设置文件的名称和格式
 		response.addHeader("Content-Disposition",
 				"attachment; filename=" + genAttachmentFileName(fileName + "_", "ZYWK") + MessageFormat.format(
-						"{0,date,yyyy-MM-dd HH:mm:ss}", new Object[] { Calendar.getInstance().getTime() }) + ".txt");// 通过后缀可以下载不同的文件格式
+						"{0,date,yyyy-MM-dd HH:mm:ss}", Calendar.getInstance().getTime()) + ".txt");// 通过后缀可以下载不同的文件格式
 		BufferedOutputStream buff = null;
 		ServletOutputStream outStr = null;
 		try {

@@ -1,1 +1,1 @@
-var console=console||{log:function(){return;}}
+var console=console||{log:function(){}};

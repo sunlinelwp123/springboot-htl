@@ -6,5 +6,5 @@ package com.open.boot.common;
 public final class CommonConstant {
 	public static final String TOKEN_ID = "token";// token
 	public static final String TOKEN_SERECT = "actor";// 秘钥
-	public static final String PICTURE_URL = "E://zywk//";
+	public static final String PICTURE_URL = "E://zywk//";//圖片路徑及日志路徑
 }

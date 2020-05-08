@@ -1,45 +1,29 @@
 package code;
 
-import static com.open.boot.core.CoreConstant.BASE_PACKAGE;
-import static com.open.boot.core.CoreConstant.MAPPER_INTERFACE_REFERENCE;
+import com.google.common.base.CaseFormat;
+import freemarker.template.TemplateExceptionHandler;
+import org.apache.commons.lang3.StringUtils;
+import org.mybatis.generator.api.MyBatisGenerator;
+import org.mybatis.generator.config.*;
+import org.mybatis.generator.internal.DefaultShellCallback;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-import org.apache.commons.lang3.StringUtils;
-import org.mybatis.generator.api.MyBatisGenerator;
-import org.mybatis.generator.config.Configuration;
-import org.mybatis.generator.config.Context;
-import org.mybatis.generator.config.GeneratedKey;
-import org.mybatis.generator.config.JDBCConnectionConfiguration;
-import org.mybatis.generator.config.JavaClientGeneratorConfiguration;
-import org.mybatis.generator.config.JavaModelGeneratorConfiguration;
-import org.mybatis.generator.config.ModelType;
-import org.mybatis.generator.config.PluginConfiguration;
-import org.mybatis.generator.config.PropertyRegistry;
-import org.mybatis.generator.config.SqlMapGeneratorConfiguration;
-import org.mybatis.generator.config.TableConfiguration;
-import org.mybatis.generator.internal.DefaultShellCallback;
-
-import com.google.common.base.CaseFormat;
-
-import freemarker.template.TemplateExceptionHandler;
+import static com.open.boot.core.CoreConstant.BASE_PACKAGE;
+import static com.open.boot.core.CoreConstant.MAPPER_INTERFACE_REFERENCE;
 
 /**
  * 代码生成器，根据数据表名称生成对应的Model、Mapper、Service、Controller简化开发。
  */
 public class CodeGenerator {
 	// JDBC配置，请修改为你项目的实际配置
-	private static final String JDBC_URL = "jdbc:mysql://47.92.97.192:3306/jzxxpt";
-	private static final String JDBC_USERNAME = "tys";
-	private static final String JDBC_PASSWORD = "tysTYS";
+	private static final String JDBC_URL = "jdbc:mysql://192.168.100.29:3306/qdappdev";
+	private static final String JDBC_USERNAME = "qdappdev";
+	private static final String JDBC_PASSWORD = "qdappdev";
 	private static final String JDBC_DIVER_CLASS_NAME = "com.mysql.jdbc.Driver";
 
 	private static final String PROJECT_PATH = System.getProperty("user.dir");// 项目在硬盘上的基础路径

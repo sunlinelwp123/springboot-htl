@@ -1,5 +1,5 @@
 ﻿$axure.internal(function($ax) {
-    var widgetDragInfo = new Object();
+    var widgetDragInfo = {};
     var _drag = {};
     $ax.drag = _drag;
 
@@ -37,7 +37,7 @@
         widgetDragInfo.currentX = x;
         widgetDragInfo.currentY = y;
 
-        widgetDragInfo.movedWidgets = new Object();
+        widgetDragInfo.movedWidgets = {};
         widgetDragInfo.startTime = (new Date()).getTime();
         widgetDragInfo.targetWidget = tg;
 
@@ -163,7 +163,7 @@
         }
 
         widgetDragInfo.hasStarted = false;
-        widgetDragInfo.movedWidgets = new Object();
+        widgetDragInfo.movedWidgets = {};
 
         return false;
     };

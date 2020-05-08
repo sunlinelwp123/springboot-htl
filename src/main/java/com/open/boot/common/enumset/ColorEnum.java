@@ -9,7 +9,7 @@ public enum ColorEnum {
 	private int index;
 
 	// 构造方法
-	private ColorEnum(String name, int index) {
+    ColorEnum(String name, int index) {
 		this.name = name;
 		this.index = index;
 	}

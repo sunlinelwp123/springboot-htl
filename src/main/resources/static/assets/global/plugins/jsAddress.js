@@ -1,4 +1,4 @@
-﻿// 纯JS省市区三级联动
+// 纯JS省市区三级联动
 // 2011-11-30 by http://www.cnblogs.com/zjfree
 var addressInit = function(_cmbProvince, _cmbCity, _cmbArea, defaultProvince, defaultCity, defaultArea)
 {
