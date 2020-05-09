@@ -50,6 +50,7 @@ public class CronTimerTask {
         SimpleScheduleBuilder simpleScheduleBuilder = SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(DELAYED).repeatForever();
         Trigger keeperTrigger = TriggerBuilder.newTrigger().startNow().withSchedule(simpleScheduleBuilder).build();
         Scheduler scheduler = stdSchedulerFactory.getScheduler();
+        scheduler.clear();
         scheduler.scheduleJob(keeperJobDetail, keeperTrigger);
         scheduler.start();
         log.info("始化定时任务管理线程初始化完成");

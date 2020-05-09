@@ -9,7 +9,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringUtil {
-    static final char LIST_ESC_CHAR = '\\';
     private static MessageDigest digest = null;
 
     public StringUtil() {
@@ -66,7 +65,9 @@ public class StringUtil {
             return obj instanceof Map ? ((Map)obj).isEmpty() : false;
         }
     }
-
+    /*
+        按行拆分成数组
+     */
     public static String[] splitIntoLines(String str) {
         if (str == null) {
             return null;
@@ -166,6 +167,9 @@ public class StringUtil {
         }
     }
 
+    /*
+        HTML标签转义
+     */
     public static final String escapeHTMLTags(String input) {
         if (input != null && input.length() != 0) {
             StringBuffer buf = new StringBuffer(input.length());
@@ -199,7 +203,9 @@ public class StringUtil {
             return input;
         }
     }
-
+    /*
+       HTML标签逆转义
+    */
     public static final String viewHTMLTags(String input) {
         if (input != null && input.length() != 0) {
             StringBuffer buf = new StringBuffer(input.length());
@@ -229,7 +235,9 @@ public class StringUtil {
             return input;
         }
     }
-
+    /*
+        字符串单向 MD5哈希转换
+     */
     public static final synchronized String hash(String data) {
         if (digest == null) {
             try {
@@ -243,7 +251,9 @@ public class StringUtil {
         digest.update(data.getBytes());
         return toHex(digest.digest());
     }
-
+    /*
+        哈希byte数组转哈希字符串
+     */
     public static final String toHex(byte[] hash) {
         StringBuffer buf = new StringBuffer(hash.length * 2);
         String stmp = "";
@@ -259,7 +269,9 @@ public class StringUtil {
 
         return buf.toString();
     }
-
+    /*
+       哈希字符串转哈希byte数组
+    */
     public static final byte[] hexToBytes(String hex) {
         if (null == hex) {
             return new byte[0];
@@ -314,6 +326,9 @@ public class StringUtil {
         return replace(input, "&amp;", "&");
     }
 
+    /*
+        给字节数转换单位 1028->1kB
+     */
     public static final String compactSizeFormat(String number) {
         String[] end = new String[]{"B", "kB", "MB", "GB"};
         double num = 0.0D;
@@ -335,6 +350,9 @@ public class StringUtil {
         return nf.format(num) + " " + end[i];
     }
 
+    /*
+        按起止位置截取字符串
+     */
     public static String substr(String src, int beginIndex, int endIndex) {
         String dest = "";
         if (src == null) {
@@ -360,7 +378,11 @@ public class StringUtil {
             }
         }
     }
-
+    /*
+        按起止位置截取字符串
+        ifAdd=true 截止位置+1
+        ifAdd=true截止位置-1
+     */
     public static String gbsubstr(String src, int beginIndex, int endIndex, boolean ifAdd) {
         String dest = "";
         dest = substr(src, beginIndex, endIndex);
@@ -374,11 +396,16 @@ public class StringUtil {
 
         return dest;
     }
-
+    /*
+       按起止位置截取字符串 截止位置-1
+    */
     public static String gbsubstr(String src, int beginIndex, int endIndex) {
         return gbsubstr(src, beginIndex, endIndex, false);
     }
 
+    /*
+        获取字符串字节数
+     */
     public static int gbStrLen(String str) {
         if (str == null) {
             return 0;
@@ -393,7 +420,9 @@ public class StringUtil {
             return strByte.length;
         }
     }
-
+    /*
+        将一个字节转换成len长的字符串
+     */
     public static String replicateStr(char ch, int len) {
         String tmpstr = null;
         char[] tmparr = null;
@@ -473,7 +502,9 @@ public class StringUtil {
             return charEnc != null ? charEnc : "<unknown charset encoding>";
         }
     }
-
+    /*
+        首字母大写
+     */
     public static String capitalize(String name) {
         if (name != null && name.length() != 0) {
             char[] chars = name.toCharArray();
@@ -483,7 +514,9 @@ public class StringUtil {
             return name;
         }
     }
-
+    /*
+        首字母大写转小写
+     */
     public static String unCapitalize(String name) {
         if (name != null && name.length() != 0) {
             char[] chars = name.toCharArray();
@@ -551,7 +584,9 @@ public class StringUtil {
 
         return sb.toString();
     }*/
-
+    /*
+       根据字符集获取字符串字节长度
+     */
     public static int getStrLenByEncoding(String str, String dbEncoding) {
         if (str == null) {
             return 0;
@@ -566,7 +601,9 @@ public class StringUtil {
             return strByte.length;
         }
     }
-
+    /*
+        获取字符串长度
+     */
     public static int getStrLen(String str) {
         return str == null ? 0 : str.length();
     }
