@@ -8,7 +8,7 @@ import java.util.concurrent.Callable;
 /**
  * 重试机制
  *
- * @author huangxuyang
+ * @author liuweiping
  */
 public class RetryUtil {
     private static final Logger log = LoggerFactory.getLogger(RetryUtil.class);

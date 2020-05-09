@@ -9,3 +9,6 @@ CREATE TABLE `t_microservice_timer_task` (
 ) ENGINE=InnoDB DEFAULT CHARSET=gbk COMMENT='定时任务配置表';
 
 INSERT INTO `t_microservice_timer_task` VALUES ('a7b67b30-901d-11ea-9f84-5254e080846c', '测试使用可删', 'com.open.boot.batch.batch.TimerDataBatchJob', '00 01 18 * * ? *', 2, '2020-5-7 12:46:03', '2020-5-8 17:59:37');
+
+INSERT INTO `t_microservice_timer_task` (`id`, `desc`, `class_name`, `cron_expression`, `status`, `create_time`, `update_time`)
+VALUES (UUID(), '测试使用可删1', 'com.open.boot.batch.batch.TimerDataBatchJobTest', '00 45 16 * * ? *', '2', NOW(), NOW());

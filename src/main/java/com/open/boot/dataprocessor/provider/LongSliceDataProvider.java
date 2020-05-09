@@ -10,7 +10,7 @@ import java.util.Set;
  * 基于Long类型的分片，如果按照 id 进行分片可以使用此抽象类
  *
  * @param <T> 数据类型
- * @author huangxuyang
+ * @author liuweiping
  * date 2018/10/27
  */
 public abstract class LongSliceDataProvider<T> implements DataProvider<T, Long> {

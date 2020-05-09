@@ -11,7 +11,7 @@ import java.util.concurrent.Callable;
  *
  * @param <T> 需要处理的数据类型
  * @param <S> 分片类
- * @author huangxuyang
+ * @author liuweiping
  * date 2018/10/27
  */
 public interface DataProvider<T, S> {

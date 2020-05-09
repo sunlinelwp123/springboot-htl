@@ -3,7 +3,7 @@ package com.open.boot.dataprocessor;
 /**
  * 数据处理器，此项目的核心接口
  *
- * @author huangxuyang
+ * @author liuweiping
  * date 2018/10/27
  */
 public interface DataProcessor {

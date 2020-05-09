@@ -27,7 +27,7 @@ import java.util.concurrent.atomic.AtomicLong;
  *
  * @param <T> 被处理的对象类，如：商机
  * @param <S> 分片类，如：时间、id等
- * @author huangxuyang
+ * @author liuweiping
  * date 2018/10/26
  */
 @SuppressWarnings("AlibabaAbstractClassShouldStartWithAbstractNaming")

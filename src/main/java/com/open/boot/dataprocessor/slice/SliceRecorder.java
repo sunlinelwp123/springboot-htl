@@ -6,7 +6,7 @@ import java.util.Set;
  * 分片记录器，用于记录成功和失败的分片，并提供读取功能，子类实现要注意线程安全问题
  *
  * @param <S> 分片的类型
- * @author huangxuyang
+ * @author liuweiping
  * date 2018/10/26
  */
 public interface SliceRecorder<S> {

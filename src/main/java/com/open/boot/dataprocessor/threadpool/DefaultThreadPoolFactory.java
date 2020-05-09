@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
  * 拒绝策略使用阻塞式，即当队列满时再添加任务将会被阻塞
  * 线程工厂为每个线程命名
  *
- * @author huangxuyang
+ * @author liuweiping
  * date 2018/10/28
  */
 public class DefaultThreadPoolFactory implements ThreadPoolFactory {

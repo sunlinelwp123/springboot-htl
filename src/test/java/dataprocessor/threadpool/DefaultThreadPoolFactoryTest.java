@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 /**
  * 测试默认线程池工厂，包括线程名和线程池大小
  *
- * @author huangxuyang
+ * @author liuweiping
  * date 2018/10/28
  */
 public class DefaultThreadPoolFactoryTest {

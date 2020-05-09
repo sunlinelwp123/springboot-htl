@@ -14,7 +14,7 @@ import java.util.Set;
  * 根据时间分片的数据提供者
  *
  * @param <T> 数据类型
- * @author huangxuyang
+ * @author liuweiping
  * date 2018/10/27
  */
 public abstract class DateSliceDataProvider<T> implements DataProvider<T, Date> {

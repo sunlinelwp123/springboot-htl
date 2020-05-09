@@ -17,7 +17,7 @@ import java.util.Set;
  * 虽然SerializerFeature.WriteClassName也能做到，但是需要添加一些额外的配置，而且如果是非常规类型，如LocalDateTime则不支持
  *
  * @param <S> 分片的类型
- * @author huangxuyang
+ * @author liuweiping
  * date 2018/10/26
  */
 public class DefaultSliceParser<S> implements SliceParser<S> {

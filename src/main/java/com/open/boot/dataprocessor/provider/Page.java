@@ -6,7 +6,7 @@ import java.util.List;
  * 数据分页信息
  *
  * @param <T> 数据类型
- * @author huangxuyang
+ * @author liuweiping
  * date 2018/10/27
  */
 public class Page<T> {

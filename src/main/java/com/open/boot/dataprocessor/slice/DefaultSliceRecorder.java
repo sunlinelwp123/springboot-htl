@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
  * 默认的分片记录器，使用文件存储
  *
  * @param <S> 分片类型
- * @author huangxuyang
+ * @author liuweiping
  * date 2018/10/26
  */
 public class DefaultSliceRecorder<S> implements SliceRecorder<S> {
